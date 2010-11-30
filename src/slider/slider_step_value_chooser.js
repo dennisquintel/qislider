@@ -1,3 +1,7 @@
+/**
+ * Adjusts the slider with steps
+ */
+ 
 var StepValueAdjuster = EventDispatcher.extend({
   init:function(sliderVO) {
     this.sliderVO = sliderVO;

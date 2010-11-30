@@ -1,3 +1,13 @@
+//= require <slider/slider_vo>
+//= require <slider/slider_step_value_chooser>
+//= require <slider/ui/slider_bar>
+//= require <slider/ui/slider_left_button>
+//= require <slider/ui/slider_right_button>
+//= require <slider/ui/slider_toggle_button>
+//= require <slider/browser>
+
+
+
 /**
  * The slider class is responsible for drawing the slider and maintaining
  * all states of the slider.

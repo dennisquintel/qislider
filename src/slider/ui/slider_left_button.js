@@ -1,3 +1,4 @@
+//= require <slider/ui/slider_button>
 /**
  * This button is used in a slider.
  */

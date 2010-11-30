@@ -1,4 +1,4 @@
-var SliderInfoBox = View.extend({
+var SliderInfoBox = EventDispatcher.extend({
   init:function(sliderVO, opts) {
     var infoBoxElement;
     if(opts.element) 

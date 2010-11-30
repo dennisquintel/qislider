@@ -1,3 +1,5 @@
+//= require <slider/slider_vo_relative>
+
 /**
  * The slider class is responsible for drawing the slider and maintaining
  * all states of the slider.

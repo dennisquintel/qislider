@@ -1,3 +1,5 @@
+//= require <slider/slider>
+
 var SimpleSliderView = EventDispatcher.extend({
   
   init:function(options) {

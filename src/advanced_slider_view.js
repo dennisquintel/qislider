@@ -1,3 +1,10 @@
+//= require <slider/slider>
+//= require <slider/ui/slider_info_box>
+//= require <slider/ui/slider_input>
+//= require <slider/ui/slider_reset_button>
+//= require <slider/ui/slider_down_button>
+
+
 var AdvancedSliderView = EventDispatcher.extend({
   
   init:function(options) {
