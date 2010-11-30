@@ -12,7 +12,10 @@ task :build => [:mkdir,:copy_base,  :build_javascript, :build_sass, :package_ass
   `zip #{pkg_dir}/#{pkg_name}.zip #{pkg_dir}`
 end
 
+
+
 task :publish => [:build] do
+   `mkdir -p /tmp/#{pkg_dir} 2>/dev/null`
   `cp -Rf #{pkg_dir} /tmp/#{pkg_dir}`
   `git checkout gh-pages`
   `cp -Rf /tmp/#{pkg_dir} .`
