@@ -9,7 +9,13 @@ def pkg_dir
 end
 
 task :build => [:mkdir,:copy_base,  :build_javascript, :build_sass, :package_assets] do
-  `zip pkg/#{pkg_name}.zip #{pkg_dir}`
+  `zip #{pkg_dir}/#{pkg_name}.zip #{pkg_dir}`
+end
+
+task :publish => [:build]
+  `cp -Rf #{pkg_dir} /tmp/#{pkg_dir}`
+  
+  
 end
 
 
