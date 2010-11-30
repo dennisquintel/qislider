@@ -1,4 +1,4 @@
-VERSION = "0.0.1"
+require './version.rb'
 
 def pkg_name
   "qislider-%s" % VERSION
@@ -12,17 +12,20 @@ task :build => [:mkdir,:copy_base,  :build_javascript, :build_sass, :package_ass
   `zip #{pkg_dir}/#{pkg_name}.zip #{pkg_dir}`
 end
 
-task :publish => [:build]
+task :publish => [:build] do
   `cp -Rf #{pkg_dir} /tmp/#{pkg_dir}`
-  
-  
+  `git checkout gh-pages`
+  `cp -Rf /tmp/#{pkg_dir} .`
+  `git commit -a -m "Published version #{VERSION}"`
+  `git push origin gh-pages`
+  `git checkout master`
 end
 
 
 
 
 task :copy_base do
-    `haml index.haml #{pkg_dir}/index.html`
+    `haml -r ./version.rb index.haml #{pkg_dir}/index.html`
 end
 
 
