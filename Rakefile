@@ -19,6 +19,7 @@ task :publish do
   `cp -Rf #{pkg_dir} /tmp/#{pkg_dir}`
   `git checkout gh-pages`
   `cp -Rf /tmp/#{pkg_dir} .`
+  `git add .`
   `git commit -a -m "Published version #{VERSION}"`
   `git push origin gh-pages`
   `git checkout master`
