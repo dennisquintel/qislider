@@ -15,10 +15,10 @@ end
 
 
 task :publish do
-   `mkdir -p /tmp/#{pkg_dir} 2>/dev/null`
-  `cp -Rf #{pkg_dir} /tmp/`
+   `mkdir -p /tmp/#{pkg_name} 2>/dev/null`
+  `cp -Rf #{pkg_dir}/* /tmp/#{pkg_name}/`
   `git checkout gh-pages`
-  `cp -Rf /tmp/#{pkg_dir}/* .`
+  `cp -Rf /tmp/#{pkg_name}/* .`
   `git add .`
   `git commit -a -m "Published version #{VERSION}"`
   `git push origin gh-pages`
