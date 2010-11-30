@@ -14,7 +14,7 @@ end
 
 
 
-task :publish => [:build] do
+task :publish do
    `mkdir -p /tmp/#{pkg_dir} 2>/dev/null`
   `cp -Rf #{pkg_dir} /tmp/#{pkg_dir}`
   `git checkout gh-pages`
