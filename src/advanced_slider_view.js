@@ -48,7 +48,7 @@ var AdvancedSliderView = EventDispatcher.extend({
     }
     
     this.nameElement.bind('selectstart', function() {return false;});    
-    this.sliderElementsElement = $('<div></div>').addClass('sliderElements');
+    this.sliderElementsElement = $('<div></div>').addClass('slider-elements');
     this.topRowElement.append(this.sliderElementsElement);
     this.topRowElement.append(this.nameElement);
     
