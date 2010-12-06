@@ -6,7 +6,8 @@
     %script{:src => "ext/event_dispatcher.js"}
     %script{:src => "qislider.js"}
     %link{:href => "qislider.css", :rel => "stylesheet", :type => "text/css"}
-
+    %style
+      p {font-size:12px; color:#999}
   %body{:style => "width:400px"}
     
     %style
@@ -121,3 +122,17 @@
       $("#slider-callback").append(a.element);
 
       / var console = {info:function(m) {$('#log').html($('#log').html() + "<br />" + m);}}
+
+
+
+    %h2 Custom name element
+    %p Custom name element it is.
+    %div{:id => "slider-custom-label"}
+      %div{:class => "name"}
+        Great name
+      
+    %script
+      var a = new AdvancedSliderView({'value':1, 'step_value':0.1, 'max_value': 3, 'min_value':1, 'name':'asdasd', 'element':$('#slider-custom-label')});
+      $("#slider-advanced-label").append(a.element);
+  
+      

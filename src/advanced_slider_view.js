@@ -36,10 +36,18 @@ var AdvancedSliderView = EventDispatcher.extend({
     this.topRowElement = $('<div></div>').addClass('toprow');
     this.element.append(this.topRowElement);
     
-    this.name = this.options.name || "untitled";
-    this.nameElement = $('<div class="name"></div>').html(this.name);
-    this.nameElement.bind('selectstart', function() {return false;});
+
+    if(this.options.element)
+      this.nameElement = $('.name', this.options.element);
+
+    // console.info(this.nameElement.length)
+    if(!this.nameElement || this.nameElement.length == 0) {
+      this.name = this.options.name || "untitled";
+      this.nameElement = $('<div class="name"></div>').html(this.name);
+      // console.info("hee")
+    }
     
+    this.nameElement.bind('selectstart', function() {return false;});    
     this.sliderElementsElement = $('<div></div>').addClass('sliderElements');
     this.topRowElement.append(this.sliderElementsElement);
     this.topRowElement.append(this.nameElement);

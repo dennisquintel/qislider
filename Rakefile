@@ -13,7 +13,7 @@ task :build => [:mkdir,:copy_base,  :build_javascript, :build_sass, :package_ass
 end
 
 
-
+# This is used to maintain Github pages
 task :publish do
    `mkdir -p /tmp/#{pkg_name} 2>/dev/null`
   `cp -Rf #{pkg_dir}/* /tmp/#{pkg_name}/`
@@ -32,15 +32,14 @@ task :copy_base do
     `haml -r ./version.rb index.haml #{pkg_dir}/index.html`
 end
 
-
 task :mkdir do
     `mkdir #{pkg_dir} \
     mkdir #{pkg_dir}/ext \
     mkdir #{pkg_dir}/images 2>/dev/null`
 end
 
-task :build_javascript do 
-  `sprocketize -I src \
+task :build_javascript do
+  `sprocketize -I ext -I src \
               qislider.js > #{pkg_dir}/qislider.js`  
 end
 
