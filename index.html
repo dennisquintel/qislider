@@ -5,15 +5,21 @@
     <script src='ext/event_dispatcher.js'></script>
     <script src='qislider.js'></script>
     <link href='qislider.css' rel='stylesheet' type='text/css' />
+    <style>
+      p {font-size:12px; color:#999}
+    </style>
   </head>
   <body style='width:400px'>
     <style>
       h2 {margin-top: 40px;font-family: Arial; letter-spacing: 0px; font-size: 15px}
       * {font-family: Arial;}
     </style>
-    <h1>QISlider 1.0.1</h1>
+    <h1>QISlider 1.0.2</h1>
     <p>The QISlider is an advanced slider set, developed by Quintel Intelligence for the <a href="http://energytransitionmodel.com">EnergyTransitionModel.com</a></p>
-    <p>Download the complete package here: <a href="qislider-1.0.1.zip">qislider-1.0.1.zip</a></p>
+    <br />
+    <p>Download the complete package here: <a href="qislider-1.0.2.zip">qislider-1.0.2.zip</a></p>
+    <br />
+    <p>Source code is on: <a href="https://github.com/dennisschoenmakers/qislider">Github</a></p>
     <script>
       var g = new SliderGroup();
     </script>
@@ -134,6 +140,17 @@
       var a = new AdvancedSliderView({'value':1, 'step_value':0.1, 'max_value': 3, 'min_value':1});
       $("#slider-callback").append(a.element);
       <!-- var console = {info:function(m) {$('#log').html($('#log').html() + "<br />" + m);}} -->
+    </script>
+    <h2>Custom name element</h2>
+    <p>Custom name element it is.</p>
+    <div id='slider-custom-label'>
+      <div class='name'>
+        Great name
+      </div>
+    </div>
+    <script>
+      var a = new AdvancedSliderView({'value':1, 'step_value':0.1, 'max_value': 3, 'min_value':1, 'name':'asdasd', 'element':$('#slider-custom-label')});
+      $("#slider-advanced-label").append(a.element);
     </script>
   </body>
 </html>
