@@ -23,7 +23,7 @@
   width: 70px;
   right: 0px; }
   .slider-input input {
-    width: 30px;
+    width: 35px;
     float: left; }
   .slider-input .value {
     font-size: 12px;
@@ -69,7 +69,7 @@
   .slider .slider-left-button-active {
     background: url("/images/slider/slider-left-button-active.png") no-repeat; }
   .slider .slider-right-button {
-    left: 150px; }
+    left: 140px; }
   .slider .slider-right-button-over {
     background: url("/images/slider/slider-right-button-over.png") no-repeat; }
   .slider .slider-right-button-active {
