@@ -104,8 +104,8 @@
     cursor: pointer;
     right: 300px; }
     .slider-advanced .name .text {
-      width: 149px;
-      float: left; }
+      float: left;
+      width: 149px; }
     .slider-advanced .name .label {
       float: left;
       font-size: 10px;
