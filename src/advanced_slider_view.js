@@ -66,6 +66,13 @@ var AdvancedSliderView = EventDispatcher.extend({
     
   },
   
+  /**
+   * Return the infobox.
+   */
+  getInfoBox:function() {
+    return this.infoBox;
+  },
+  
   /** 
    * All event listeners are initialized.
    */ 

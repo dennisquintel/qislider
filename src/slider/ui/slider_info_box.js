@@ -58,11 +58,13 @@ var SliderInfoBox = EventDispatcher.extend({
     this.element.show();
     this.isVisible = true;
     this.dispatchEvent("visibility")
+    this.dispatchEvent("show", this);
   },
   hide:function() {
     this.element.hide();
     this.isVisible = false;
     this.dispatchEvent("visibility")
+    this.dispatchEvent("hide", this);
   },
   
   handleSliderUpdate:function() {
