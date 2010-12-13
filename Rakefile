@@ -44,7 +44,9 @@ task :build_javascript do
 end
 
 task :build_sass do 
-  `sass stylesheets/slider.sass > #{pkg_dir}/qislider.css`
+  `echo "\\$slider_image_location:'images/slider'" > /tmp/slider.sass`
+  `tail -n +2 stylesheets/slider.sass >> /tmp/slider.sass`
+  `sass /tmp/slider.sass > #{pkg_dir}/qislider.css`
 end
 
 task :package_assets do

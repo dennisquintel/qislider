@@ -623,11 +623,13 @@ var SliderInfoBox = EventDispatcher.extend({
     this.element.show();
     this.isVisible = true;
     this.dispatchEvent("visibility")
+    this.dispatchEvent("show", this);
   },
   hide:function() {
     this.element.hide();
     this.isVisible = false;
     this.dispatchEvent("visibility")
+    this.dispatchEvent("hide", this);
   },
 
   handleSliderUpdate:function() {
@@ -806,6 +808,13 @@ var AdvancedSliderView = EventDispatcher.extend({
     this.element.append($('<div>').addClass('clear'));
     this.element.append(this.infoBox.element);
 
+  },
+
+  /**
+   * Return the infobox.
+   */
+  getInfoBox:function() {
+    return this.infoBox;
   },
 
   /**
