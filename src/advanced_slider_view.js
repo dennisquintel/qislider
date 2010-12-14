@@ -102,6 +102,7 @@ var AdvancedSliderView = EventDispatcher.extend({
   },
   
   handleReset:function() {
+    console.info('RESET');
     this.sliderVO.reset();
     this.dispatchEvent('change');
   },
